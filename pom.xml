@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.atguigu.mall</groupId>
+    <artifactId>mall</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>mall</name>
+    <description>聚合服务</description>
+
+<!--    父pom的packing必须为pom，表示在install时不会生成jar、war包，该pom文件只能作为整合-->
+    <packaging>pom</packaging>
+
+
+<!--    将各个模块聚合起来，编译顺序也如下，所以这是使用父pom文件的好处 -->
+    <modules>
+        <module>mall-coupon</module>
+        <module>mall-member</module>
+        <module>mall-order</module>
+        <module>mall-products</module>
+        <module>mall-ware</module>
+    </modules>
+</project>
